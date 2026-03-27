@@ -6,4 +6,7 @@ export class IAuditLogRepository {
 
   // Useful to enforce idempotency
   async hasRecentLogForLead(leadId, stageId) { throw new Error('Not implemented'); }
+
+  // Find stage transition logs for a company within a date range (used for conversion latency calculation)
+  async findTransitionsByCompany(companyId, startDate, endDate) { throw new Error('Not implemented'); }
 }

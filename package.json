@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Basic Node.js backend",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node --test --experimental-test-coverage"
   },
   "author": "",
   "license": "ISC"
