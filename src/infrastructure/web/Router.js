@@ -74,6 +74,16 @@ export class Router {
       req.query = Object.fromEntries(parsedUrl.searchParams.entries());
       req.params = {};
 
+      // CORS Headers
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, DELETE');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-api-key');
+
+      if (req.method === 'OPTIONS') {
+        res.statusCode = 204;
+        return res.end();
+      }
+
       if (req.method !== 'GET' && req.method !== 'HEAD') {
         req.body = await this.parseBody(req);
       } else {

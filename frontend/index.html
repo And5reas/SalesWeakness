@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SalesWeakness | Monitoramento de Gargalos</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="dashboard">
+      <header>
+        <h1><span class="highlight">Sales</span>Weakness</h1>
+        <p>Monitoramento de Eficiência & Gargalos do Funil</p>
+      </header>
+      
+      <main>
+        <section class="cards-container">
+          <div class="card glass">
+            <div class="card-icon">⏱️</div>
+            <h3>Latência Média</h3>
+            <div class="card-value" id="latency-val">-- h</div>
+            <p>Tempo de conversão médio</p>
+          </div>
+          <div class="card glass danger-card">
+            <div class="card-icon">💸</div>
+            <h3>Leads Estagnados</h3>
+            <div class="card-value" id="stagnant-val">--</div>
+            <p>Oportunidades travadas (Dinheiro na mesa)</p>
+          </div>
+        </section>
+
+        <section class="bottlenecks-section">
+          <h2>Leads Parados (Gargalos Críticos)</h2>
+          <div class="table-container glass">
+            <table id="bottlenecks-table">
+              <thead>
+                <tr>
+                  <th>ID do Lead</th>
+                  <th>Etapa Atual</th>
+                  <th>Registrado em</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="bottlenecks-body">
+                <tr><td colspan="4" style="text-align: center; padding: 2rem;">Carregando dados... Certifique-se que o backend (npm start) está rodando.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
